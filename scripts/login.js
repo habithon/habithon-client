@@ -1,3 +1,6 @@
+import { checkInvalidUser } from "./utils.js"
+checkInvalidUser();
+
 function login (data) {
     
     const options = {
@@ -14,7 +17,7 @@ function login (data) {
         .then(data => {
             if (data["success"]) {
                 localStorage.setItem("token", data["token"]);
-                window.location.assign("/");
+                window.location.assign("/pages/index.html");
             } else {
                 throw "Unable to authenticate!"
             }

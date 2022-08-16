@@ -1,5 +1,28 @@
+import { checkInvalidUser } from "./utils.js"
+checkInvalidUser();
+
 function register (data) {
-    console.log("register", data)
+    const options = {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+
+    fetch("http://localhost:3000/users/register", options)
+        .then(res => res.json())
+        .then(data => {
+            if (data["success"]) {
+                localStorage.setItem("token", data["token"]);
+                window.location.assign("/pages/index.html");
+            } else {
+                throw "Unable to authenticate!"
+            }
+        })
+        .catch(err => alert(err))
+    
 }
 
 document.querySelector('.register-form').addEventListener("submit", (e) => {
@@ -15,4 +38,5 @@ document.querySelector('.register-form').addEventListener("submit", (e) => {
     })
 
     e.target.reset();
+    
 })

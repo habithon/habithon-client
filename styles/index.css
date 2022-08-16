@@ -81,10 +81,10 @@ header .menu {
   width: 60%;
   transition: 0.5s;
 }
-.habit-item:hover {
+/* .habit-item:hover {
   background-color: rgb(40, 153, 40);
   cursor: pointer;
-}
+} */
 
 .habit-modal-backdrop {
   position: absolute;
@@ -155,6 +155,10 @@ header .menu {
   margin-bottom: 2rem;
 }
 
+.stats-button.disable {
+  background: grey;
+}
+
 .close-container span {
   display: none;
 }
@@ -183,4 +187,8 @@ footer div {
 
 footer img {
   width: 2rem;
+}
+
+.habit-item.habit-item-picked {
+  background: green;
 }
