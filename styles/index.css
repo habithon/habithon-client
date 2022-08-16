@@ -80,6 +80,7 @@ header .menu {
 .habits-grid .habit-item img {
   width: 60%;
   transition: 0.5s;
+ 
 }
 .habit-item:hover {
   background-color: rgb(40, 153, 40);

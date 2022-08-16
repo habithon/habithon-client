@@ -63,33 +63,35 @@ document.addEventListener('click', (e)=>{
     
     var elementToRename = document.getElementById("form-key");
     var elementToRenam = document.getElementById("label-text");
-    
-    if(e.target.id == 'water'){
+   const id=  e.target.id
+
+
+    if(id == 'water' || id == 'water-img'){
         modalHandler()
         elementToRename.setAttribute("name","water");
         elementToRenam.textContent = 'Drink 2ltr Water'
         
-    } else if(e.target.id == 'exercise'){
+    } else if(id == 'exercise' || id == 'exercise-img'){
         modalHandler()
         elementToRename.setAttribute("name","exercise");
         elementToRenam.textContent = 'Exercise'
         
-    } else if(e.target.id == 'sleep'){
+    } else if(id == 'sleep' || id == 'sleep-img'){
         modalHandler()
         elementToRename.setAttribute("name","sleep");
         elementToRenam.textContent = 'Sleep 8 hours'
         
-    }else if(e.target.id == 'read'){
+    }else if(id == 'read' || id == 'read-img'){
         modalHandler()
         elementToRename.setAttribute("name","read");
         elementToRenam.textContent = 'Read'
         
-    }else if(e.target.id == 'gaming'){
+    }else if(id == 'gaming' || id == 'gaming-img'){
         modalHandler()
         elementToRename.setAttribute("name","gaming");
         elementToRenam.textContent = 'Gaming'
         
-    }else if(e.target.id == 'study'){
+    }else if(id == 'study' || id == 'study-img'){
         modalHandler()
         elementToRename.setAttribute("name","Study");
         elementToRenam.textContent = 'Study'
