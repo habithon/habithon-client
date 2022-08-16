@@ -75,7 +75,7 @@ position:relative;
   background-color: white;
 }
 
-.goals-grid .goals-item .active {position:absolute;
+.goals-grid .goals-item .water-active {position:absolute;
 right:1rem;
 color:green;
 font-weight:bold}

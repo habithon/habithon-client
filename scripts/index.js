@@ -1,6 +1,8 @@
-const subBtn = document.getElementById("sub-btn")
-const span = document.querySelector("span")
 
+
+
+
+const subBtn = document.getElementById("sub-btn")
 const modalBackdrop = document.querySelector(".habit-modal-backdrop")
 const habitModal = document.querySelector(".habit-modal")
 const closeModal = document.querySelector(".close")
@@ -8,15 +10,13 @@ const closeModal = document.querySelector(".close")
 
 
 const form = document.querySelector('form')
-var elementToRename = document.getElementById("form-key");
-var elementToRenam = document.getElementById("label-text");
+
 
 
 
 form.addEventListener('submit', function (e){
 console.log('hello')
-const box = document.querySelectorAll(".check_box")
-    box.forEach(b => b.checked = false)
+
     e.preventDefault()
     const prePayload = new FormData(form);
     const payload = new URLSearchParams(prePayload);
@@ -55,36 +55,38 @@ closeModal.addEventListener('click', ()=>{
 function modalHandler(){
     modalBackdrop.style.display = 'block'
     modalBackdrop.style.left = '0px'
-
+    const box = document.querySelectorAll(".check_box")
+    box.forEach(b => b.checked = false)
 }
 
 document.addEventListener('click', (e)=>{
     
-  
-
+    var elementToRename = document.getElementById("form-key");
+    var elementToRenam = document.getElementById("label-text");
+    
     if(e.target.id == 'water'){
         modalHandler()
-        elementToRename.setAttribute("name","Drink Water");
+        elementToRename.setAttribute("name","water");
         elementToRenam.textContent = 'Drink 2ltr Water'
         
     } else if(e.target.id == 'exercise'){
         modalHandler()
-        elementToRename.setAttribute("name","Exercise");
+        elementToRename.setAttribute("name","exercise");
         elementToRenam.textContent = 'Exercise'
         
     } else if(e.target.id == 'sleep'){
         modalHandler()
-        elementToRename.setAttribute("name","Sleep");
+        elementToRename.setAttribute("name","sleep");
         elementToRenam.textContent = 'Sleep 8 hours'
         
     }else if(e.target.id == 'read'){
         modalHandler()
-        elementToRename.setAttribute("name","Read");
+        elementToRename.setAttribute("name","read");
         elementToRenam.textContent = 'Read'
         
     }else if(e.target.id == 'gaming'){
         modalHandler()
-        elementToRename.setAttribute("name","Gaming");
+        elementToRename.setAttribute("name","gaming");
         elementToRenam.textContent = 'Gaming'
         
     }else if(e.target.id == 'study'){
@@ -95,6 +97,7 @@ document.addEventListener('click', (e)=>{
     }else;
 })
     
+
 
 
 
