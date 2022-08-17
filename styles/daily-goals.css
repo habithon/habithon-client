@@ -87,6 +87,33 @@ width:100%;
 
 }
 
+.update-modal{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+height:100%;
+background-color:white;
+border-radius:2rem;
+
+}
+
+#water-modal, #exercise-modal, #read-modal, #sleep-modal{display:none}
+
+
+.update-btn {
+  margin:.5rem;
+padding:.5rem;
+background-color:black;
+color:white;
+cursor:pointer;
+border-radius:.4rem;
+border:none;}
+
+
 .goals-grid .goals-item .stats-wrapper p {
   line-height: 20px;
   font-size: 0.8rem;

@@ -1,29 +1,29 @@
-import { checkUser } from "./utils.js";
-checkUser();
-console.log("hello")
+//import { checkUser } from "./utils.js";
+//checkUser();
+//console.log("hello")
 
-const options = {
-    method: "GET",
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token')
-    },
-}
+//const options = {
+   // method: "GET",
+    //headers: {
+     //   'Accept': 'application/json',
+      //  'Content-Type': 'application/json',
+      //  'Authorization': localStorage.getItem('token')
+   // },
+//}
 
-fetch("https://habithon-server.herokuapp.com/goals/", options)
-.then(res => res.json())
-.then(data => {
-    if (data["success"]) {
-        if (data.habits.length !== 0) {
-            window.location.assign("/pages/daily-goals.html");
-        } 
-    } else {
-        throw "Unable to authenticate!"
-    }
+//fetch("https://habithon-server.herokuapp.com/goals/", options)
+//.then(res => res.json())
+//.then(data => {
+  //  if (data["success"]) {
+   //     if (data.habits.length !== 0) {
+     //       window.location.assign("/pages/daily-goals.html");
+      //  } 
+   // } else {
+       // throw "Unable to authenticate!"
+   // }
   
-})
-.catch(err => alert(err))
+//})
+//.catch(err => alert(err))
 
 const subBtn = document.getElementById("sub-btn")
 const modalBackdrop = document.querySelector(".habit-modal-backdrop")
