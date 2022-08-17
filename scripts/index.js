@@ -1,5 +1,6 @@
 import { checkUser } from "./utils.js";
 checkUser();
+console.log("hello")
 
 const options = {
     method: "GET",
