@@ -33,9 +33,9 @@ document.querySelector('.register-form').addEventListener("submit", (e) => {
 
     register({
         username: form.get("username"),
-        // email: form.get("email"),
+        email: form.get("email"),
         password: form.get("password"),
-        // passwordCheck: form.get("passwordCheck")
+        passwordCheck: form.get("passwordCheck")
     })
 
     e.target.reset();
