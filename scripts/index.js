@@ -1,38 +1,5 @@
 import { checkUser, logout, getGoals } from "./utils.js";
 checkUser();
-//document.querySelector('.button')
-logout();
-
-// const options = {
-//     method: "GET",
-//     headers: {
-//         'Accept': 'application/json',
-//         'Content-Type': 'application/json',
-//         'Authorization': localStorage.getItem('token')
-//     },
-// }
-
-// fetch("https://habithon-server.herokuapp.com/goals/", options)
-// .then(res => res.json())
-// .then(data => {
-//     if (data["success"]) {
-//         if (data.habits.length !== 0) {
-//             window.location.assign("/pages/daily-goals.html");
-//         } 
-//     } else {
-//         throw "Unable to authenticate!"
-//     }
-  
-// })
-// .catch(err => alert(err))
-
-(async () => {
-    const habits = await getGoals()
-    if (habits.length !== 0) {
-        window.location.assign("/pages/daily-goals.html");
-        } 
-    console.log(habits)
-})();
 
 const subBtn = document.getElementById("sub-btn")
 const modalBackdrop = document.querySelector(".habit-modal-backdrop")
@@ -53,17 +20,25 @@ console.log('hello')
     const prePayload = new FormData(form);
     const payload = new URLSearchParams(prePayload);
 
-    console.log([...payload])
+    const arr = [...payload]
+    const body = {
+        habit: arr[0][0],
+        frequency: arr[1][0]
+    }
 
-    fetch('http://localhost:3000', {
-
-method: 'POST',
-body:payload,
-})
+    fetch('https://habithon-server.herokuapp.com/goals', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.getItem('token')
+    },
+    body:JSON.stringify(body),
+    })
 
     .then(res => res.json())
-    .then(data => console.log(data))
-    .then(err => console.log(err))
+    .then(data => window.location.assign("/pages/daily-goals.html"))
+    .catch(err => console.log(err))
 
 })
 

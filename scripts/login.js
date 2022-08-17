@@ -15,9 +15,10 @@ function login (data) {
     fetch("https://habithon-server.herokuapp.com/user/login", options)
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             if (data["success"]) {
                 localStorage.setItem("token", data["token"]);
-                window.location.assign("/pages/index.html");
+                window.location.assign("/pages/daily-goals.html");
             } else {
                 throw "Unable to authenticate!"
             }
