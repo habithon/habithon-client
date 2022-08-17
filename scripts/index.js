@@ -38,7 +38,7 @@ body:payload,
 
 subBtn.addEventListener('click', ()=>{
     
-    modalBackdrop.style.left = '-400px'
+    
    
 })
 
@@ -61,9 +61,9 @@ function modalHandler(){
 
 document.addEventListener('click', (e)=>{
     
-    var elementToRename = document.getElementById("form-key");
-    var elementToRenam = document.getElementById("label-text");
-   const id=  e.target.id
+    const elementToRename = document.getElementById("form-key");
+    const elementToRenam = document.getElementById("label-text");
+   const id =  e.target.id
 
 
     if(id == 'water' || id == 'water-img'){
