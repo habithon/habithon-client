@@ -37,7 +37,7 @@ console.log('hello')
     })
 
     .then(res => res.json())
-    // .then(data => window.location.assign("/pages/daily-goals.html"))
+    .then(data => window.location.assign("/pages/daily-goals.html"))
     .catch(err => console.log(err))
 
 })
@@ -82,7 +82,7 @@ document.addEventListener('click', (e)=>{
         
     } else if(id == 'exercise' || id == 'exercise-img'){
         modalHandler()
-        imageElement.setAttribute('data-image', 'images/goals-water.jpg')
+        imageElement.setAttribute('data-image', 'images/goals-exercise.jpg')
         elementToRename.setAttribute("name","exercise");
         elementToRenam.textContent = 'Exercise'
         
