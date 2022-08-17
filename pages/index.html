@@ -1,28 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/base.css">
-	<link rel="stylesheet" href="../styles/components.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/index.css">
-
-	<title>Home - Habit Tracker</title>
+    <script src="../scripts/index.js" defer></script>
+    <title>Document</title>
 </head>
-
 <body>
-	<header>
-		<h1>
-			Habit Tracker
-		</h1>
-	</header>
-	<main>
-		<a class="button" href="/pages/login.html">Login</a>
-		<a class="button" href="/pages/register.html">Register</a>
-	</main>
-	<footer>
-		<p>Habit Tracker &copy; 2022</p>
-	</footer>
-</body>
 
+    <header>
+        <img class='menu' src="images/menu.jpg" alt="">
+        <img class='running-icon' src="images/running-man.jpg" alt=""> 
+        <div class='img-wrapper'>
+            <img src="images/bell-icon.jpg" alt="">
+            <img class='profile-pic' src="images/000266 2.jpg" alt="">
+        </div>
+    </header>
+    
+    <div class="title">
+        <div>
+            <h1>Streak</h1>
+            <span>Score: 100 points</span>
+        </div>
+    </div>
+
+    <main>
+       
+<section class="habits-grid">
+    <div class="habit-item " id="water"><img id='water-img' src="images/water.jpg" alt=""><h2>Water</h2></div>
+    <div class="habit-item" id="exercise"><img id="exercise-img" src="images/exercise.jpg" alt=""><h2>Exercise</h2></div>
+    <div class="habit-item" id="sleep"><img id="sleep-img" src="images/sleeping.jpg" alt=""><h2>Sleep</h2></div>
+    <div class="habit-item" id="read"><img id="read-img" src="images/reading.jpg" alt=""><h2>Read</h2></div>
+    <div class="habit-item" id="gaming"><img id="gaming-img" src="images/gaming.jpg" alt=""><h2>Gaming</h2></div>
+    <div class="habit-item" id="study"><img id="study-img" src="images/studying.jpg" alt=""><h2>Study</h2></div>
+   
+</section>
+<div class="habit-modal-backdrop">
+    
+        
+   
+<div class="habit-modal">
+    <div class="close">x</div>
+    <div class="p-2">
+       
+       
+<form class='habit-form'method="post" action="https://localhost:3000">
+          
+    <div>
+        <input  id='form-key' type='hidden' class='check_box' type="checkbox" name="" value="true" />
+        <label id='label-text' for="send_newsletter"> </label>
+        </div>     
+    <div>
+    <input class='check_box' type="checkbox" name="Daily" id="drink_water" value="true" />
+    <label for="send_newsletter"> Daily</label>
+    </div>
+    <div>
+    <input class='check_box' type="checkbox" name="Weekly"  value="true"/>
+    <label for="agree"> Weekly</label>
+    </div>
+    <div>
+        <input class='check_box' type="checkbox" name="Monthly"  value="true"/>
+        <label for="agree"> Monthly</label>
+        </div>
+      
+      <input type="submit" name="submit" value="Track Habit" id='sub-btn'/>
+      </div>
+    </form>
+      </div>
+</div>
+</div>
+
+<div class="stats-button">
+    Get Started!</div>
+ </main>
+    
+<footer>
+    <div><img src="images/graph.jpg" alt=""></div>
+    <div><img src="images/dumbbell.jpg" alt=""></div>
+    <div><img src="images/user.jpg" alt=""></div>
+    <div class="graph-stats"><a href="daily-goals.html"><img src="images/graph.jpg" alt=""></a></div>
+</footer>
+
+
+</body>
 </html>

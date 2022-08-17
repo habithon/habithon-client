@@ -1,25 +1,189 @@
-body { 
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    background: hsl(200, 100%, 50%);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
 }
 
 header {
-    display: grid;
-    place-content: center;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-main {
-    display: grid;
-    place-content: center;
-    background: white;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    gap: 1rem;
+header .menu {
+  width: 35px;
+  height: 25px;
+}
+
+.img-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.running-icon {
+  width: 60px;
+  margin-right: -16.5%;
+}
+
+.profile-pic {
+  width: 60px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+
+  background-color: #e4e9ff;
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.title h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.habits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  gap: 30px;
+  text-align: center;
+}
+
+.habits-grid .habit-item {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  background-color: #f5f4ff;
+}
+
+.habits-grid .habit-item h2 {
+  font-size: 1.3rem;
+  font-family: arial;
+  margin: 0;
+}
+
+.habits-grid .habit-item img {
+  width: 60%;
+  transition: 0.5s;
+ 
+}
+.habit-item:hover {
+  background-color: rgb(40, 153, 40);
+  cursor: pointer;
+}
+
+.habit-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: -400px;
+  width: 100%;
+  height: 100%;
+  
+  transition: 0.8s;
+}
+
+.close {
+  float: right;
+  font-size: 35px;
+  font-family: arial;
+  padding-right: 1rem;
+}
+
+.habit-modal {
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  top: 0;
+  left: 0;
+
+
+  border: 1px solid #d6deffa6;
+  
+  border-bottom-right-radius: 2rem;
+  background-color: #E4E9FF ;
+}
+
+.habit-modal .habit-form {
+  width: 60%;
+  margin: auto;
+  text-align: left;
+  margin-top: 50%;
+}
+
+.habit-modal .habit-form div {
+  padding: 0.5rem;
+}
+
+.habit-modal .habit-form div input.g {
+  width: 1rem;
+  height: 1rem;
+}
+
+#sub-btn {
+  background-color: black;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-weight:bold
+}
+
+.stats-button {
+  width: 76%;
+  text-align: center;
+  margin: auto;
+  background-color: black;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: arial;
+  margin-bottom: 2rem;
+}
+
+.close-container span {
+  display: none;
+}
+
+.graph-stats {
+  background-color: green;
 }
 
 footer {
-    display: grid;
-    place-content: center;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 3rem;
+  align-items: center;
+  background-color: #d6deffa6;
+}
+
+footer div {
+  background-color: #d6deffa6;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+footer img {
+  width: 2rem;
 }

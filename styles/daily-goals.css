@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+header .menu {
+  width: 35px;
+  height: 25px;
+}
+
+.img-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.running-icon {
+  width: 60px;
+  margin-right: -16.5%;
+}
+
+.profile-pic {
+  width: 60px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+
+  background-color: #e4e9ff;
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.title h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 80%;
+  margin-left: 14%;
+  margin-bottom: 1rem;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  gap: 30px;
+  text-align: center;
+}
+
+.goals-grid .goals-item {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid rgb(219, 217, 217);
+  border-radius: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+position:relative;
+  background-color: white;
+}
+
+.goals-grid .goals-item .active {position:absolute;
+right:1rem;
+color:green;
+font-weight:bold}
+
+.stats-wrapper {
+
+width:100%;
+  padding-left: 1rem;
+
+}
+
+.goals-grid .goals-item .stats-wrapper p {
+  line-height: 20px;
+  font-size: 0.8rem;
+}
+
+.goals-grid .goals-item .stats-wrapper h2 {
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+}
+
+.goals-grid .goals-item .stats-wrapper span {
+  color: grey;
+}
+
+.goals-grid img {
+  width: 70%;
+  margin-left: -50px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 3rem;
+  align-items: center;
+  background-color: #d6deffa6;
+}
+
+footer div {
+  background-color: #d6deffa6;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+footer img {
+  width: 2rem;
+}

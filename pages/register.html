@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/register.css">
 
     <script src="https://kit.fontawesome.com/4e4fe285ef.js" crossorigin="anonymous"></script>
+	<script type="module" src="../scripts/register.js" defer></script>
 
 	<title>Register - Habit Tracker</title>
 
@@ -24,21 +25,21 @@
 		<h2>
 			Register
 		</h2>
-		<form>
+		<form class="register-form">
 			<div class="field">
-				<label for="name" hidden>Name</label>
-				<input type="text" name="name" id="name" placeholder="Name">
+				<label for="username" hidden>Username</label>
+				<input type="text" name="username" id="username" placeholder="Username">
 				<div class="icon">
 					<i class="fa-solid fa-user"></i>
 				</div>
 			</div>
-			<div class="field">
+			<!-- <div class="field">
 				<label for="email" hidden>Email</label>
 				<input type="text" name="email" id="email" placeholder="Email">
 				<div class="icon">
 					<i class="fa-solid fa-envelope"></i>
 				</div>
-			</div>
+			</div> -->
 			<div class="field">
 				<label for="password" hidden>Password</label>
 				<input type="password" name="password" id="password" placeholder="Password">
@@ -46,13 +47,13 @@
 					<i class="fa-solid fa-lock"></i>
 				</div>
 			</div>
-			<div class="field">
+			<!-- <div class="field">
 				<label for="passwordCheck" hidden>Confirm Password</label>
 				<input type="password" name="passwordCheck" id="passwordCheck" placeholder="Confirm Password">
 				<div class="icon">
 					<i class="fa-solid fa-lock"></i>
 				</div>
-			</div>
+			</div> -->
 			<input class="button" type="submit" value="Register">
 		</form>
 

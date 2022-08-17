@@ -1,0 +1,25 @@
+body { 
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    background: hsl(200, 100%, 50%);
+}
+
+header {
+    display: grid;
+    place-content: center;
+    color: white;
+}
+
+main {
+    display: grid;
+    place-content: center;
+    background: white;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    gap: 1rem;
+}
+
+footer {
+    display: grid;
+    place-content: center;
+}

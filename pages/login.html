@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/base.css">
+	<link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/login.css">
+
+	<script src="https://kit.fontawesome.com/4e4fe285ef.js" crossorigin="anonymous"></script>
+	<script type="module" src="../scripts/login.js" defer></script>
+
+	<title>Login - Habit Tracker</title>
+
+</head>
+
+<body>
+	<header>
+		<h1>
+			Habit Tracker
+		</h1>
+		<div class="curve"></div>
+	</header>
+	<main>
+		<h2>
+			Login
+		</h2>
+		<form class="login-form">
+			<div class="field">
+				<label for="username" hidden>Username</label>
+				<input type="text" name="username" id="username" placeholder="Username">
+				<div class="icon">
+					<i class="fa-solid fa-user"></i>
+				</div>
+			</div>
+			<div class="field">
+				<label for="password" hidden>Password</label>
+				<input type="password" name="password" id="password" placeholder="Password">
+				<div class="icon">
+					<i class="fa-solid fa-lock"></i>
+				</div>
+			</div>
+			<input class="button" type="submit" value="Login">
+		</form>
+
+	</main>
+	<footer>
+		<p>
+			Don't have an account? <a class="link" href="/pages/register.html">Register</a>
+		</p>
+	</footer>
+
+</body>
+
+</html>
