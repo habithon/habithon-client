@@ -1,6 +1,6 @@
-import { checkUser, logout, getGoals} from "./utils.js";
-checkUser();
-logout();
+//import { checkUser, logout, getGoals} from "./utils.js";
+//checkUser();
+//logout();
 
 (async () => {
     const habits = await getGoals()
