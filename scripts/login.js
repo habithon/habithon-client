@@ -12,7 +12,7 @@ function login (data) {
         body: JSON.stringify(data)
     }
 
-    fetch("http://localhost:3000/users/login", options)
+    fetch("https://habithon-server.herokuapp.com/user/login", options)
         .then(res => res.json())
         .then(data => {
             if (data["success"]) {
@@ -21,6 +21,7 @@ function login (data) {
             } else {
                 throw "Unable to authenticate!"
             }
+          
         })
         .catch(err => alert(err))
 
@@ -32,7 +33,7 @@ document.querySelector('.login-form').addEventListener("submit", (e) => {
     const form = new FormData(e.target);
 
     login({
-        email: form.get("email"),
+        username: form.get("username"),
         password: form.get("password")
     })
 

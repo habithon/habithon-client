@@ -80,11 +80,12 @@ header .menu {
 .habits-grid .habit-item img {
   width: 60%;
   transition: 0.5s;
+ 
 }
-/* .habit-item:hover {
+.habit-item:hover {
   background-color: rgb(40, 153, 40);
   cursor: pointer;
-} */
+}
 
 .habit-modal-backdrop {
   position: absolute;
@@ -92,7 +93,7 @@ header .menu {
   left: -400px;
   width: 100%;
   height: 100%;
-
+  
   transition: 0.8s;
 }
 
@@ -110,9 +111,11 @@ header .menu {
   top: 0;
   left: 0;
 
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
   border: 1px solid #d6deffa6;
-  background-color: white;
+  
+  border-bottom-right-radius: 2rem;
+  background-color: #E4E9FF ;
 }
 
 .habit-modal .habit-form {
@@ -155,10 +158,6 @@ header .menu {
   margin-bottom: 2rem;
 }
 
-.stats-button.disable {
-  background: grey;
-}
-
 .close-container span {
   display: none;
 }
@@ -187,8 +186,4 @@ footer div {
 
 footer img {
   width: 2rem;
-}
-
-.habit-item.habit-item-picked {
-  background: green;
 }

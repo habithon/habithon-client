@@ -11,12 +11,13 @@ function register (data) {
         body: JSON.stringify(data)
     }
 
-    fetch("http://localhost:3000/users/register", options)
+    fetch("https://habithon-server.herokuapp.com/user/register", options)
         .then(res => res.json())
-        .then(data => {
-            if (data["success"]) {
-                localStorage.setItem("token", data["token"]);
-                window.location.assign("/pages/index.html");
+        .then(response => {
+            console.log(response)
+            if (response["success"]) {
+                window.location.assign("/pages/login.html");
+              
             } else {
                 throw "Unable to authenticate!"
             }
@@ -31,10 +32,10 @@ document.querySelector('.register-form').addEventListener("submit", (e) => {
     const form = new FormData(e.target);
 
     register({
-        name: form.get("name"),
-        email: form.get("email"),
+        username: form.get("username"),
+        // email: form.get("email"),
         password: form.get("password"),
-        passwordCheck: form.get("passwordCheck")
+        // passwordCheck: form.get("passwordCheck")
     })
 
     e.target.reset();

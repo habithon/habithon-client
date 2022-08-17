@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/index.css">
-    <script type="module" src="../scripts/index.js" defer></script>
+    <script src="../scripts/index.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -29,12 +29,12 @@
     <main>
        
 <section class="habits-grid">
-    <div class="habit-item water"><img src="images/water.jpg" alt=""><h2>Water</h2></div>
-    <div class="habit-item"><img src="images/exercise.jpg" alt=""><h2>Exercise</h2></div>
-    <div class="habit-item"><img src="images/sleeping.jpg" alt=""><h2>Sleep</h2></div>
-    <div class="habit-item"><img src="images/reading.jpg" alt=""><h2>Read</h2></div>
-    <div class="habit-item"><img src="images/gaming.jpg" alt=""><h2>Gaming</h2></div>
-    <div class="habit-item"><img src="images/studying.jpg" alt=""><h2>Study</h2></div>
+    <div class="habit-item " id="water"><img id='water-img' src="images/water.jpg" alt=""><h2>Water</h2></div>
+    <div class="habit-item" id="exercise"><img id="exercise-img" src="images/exercise.jpg" alt=""><h2>Exercise</h2></div>
+    <div class="habit-item" id="sleep"><img id="sleep-img" src="images/sleeping.jpg" alt=""><h2>Sleep</h2></div>
+    <div class="habit-item" id="read"><img id="read-img" src="images/reading.jpg" alt=""><h2>Read</h2></div>
+    <div class="habit-item" id="gaming"><img id="gaming-img" src="images/gaming.jpg" alt=""><h2>Gaming</h2></div>
+    <div class="habit-item" id="study"><img id="study-img" src="images/studying.jpg" alt=""><h2>Study</h2></div>
    
 </section>
 <div class="habit-modal-backdrop">
@@ -45,36 +45,35 @@
     <div class="close">x</div>
     <div class="p-2">
        
-        <form class='habit-form' onsubmit="return handleData()" method="post" action="https://postman-echo.com/post">
+       
+<form class='habit-form'method="post" action="https://localhost:3000">
           
-            
-        <div>
-        <input class='check_box' type="checkbox" name="drink water" id="drink_water" value="2 litre" />
-        <label for="send_newsletter"> 2 ltr per day</label>
+    <div>
+        <input  id='form-key' type='hidden' class='check_box' type="checkbox" name="" value="true" />
+        <label id='label-text' for="send_newsletter"> </label>
+        </div>     
+    <div>
+    <input class='check_box' type="checkbox" name="Daily" id="drink_water" value="true" />
+    <label for="send_newsletter"> Daily</label>
+    </div>
+    <div>
+    <input class='check_box' type="checkbox" name="Weekly"  value="true"/>
+    <label for="agree"> Weekly</label>
+    </div>
+    <div>
+        <input class='check_box' type="checkbox" name="Monthly"  value="true"/>
+        <label for="agree"> Monthly</label>
         </div>
-        <div>
-        <input class='check_box' type="checkbox" name="duration" id="water" value="16 hours"/>
-        <label for="agree"> 16 hours</label>
-        </div>
-        <div>
-            <input class='check_box' type="checkbox" name="duration" id="water" value="16 hours"/>
-            <label for="agree"> what else?</label>
-            </div>
-          
-            <div>
-                <input class='check_box' type="checkbox" name="duration" id="water" value="16 hours"/>
-                <label for="agree"> what else?</label>
-                </div>
-              <div>
-          <input type="submit" name="submit" value="Track Habit" id='sub-btn'/>
-          </div>
-        </form>
+      
+      <input type="submit" name="submit" value="Track Habit" id='sub-btn'/>
+      </div>
+    </form>
       </div>
 </div>
 </div>
 
-<button class="stats-button">
-    Get Started!</button>
+<div class="stats-button">
+    Get Started!</div>
  </main>
     
 <footer>
