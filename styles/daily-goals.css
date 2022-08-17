@@ -64,14 +64,14 @@ header .menu {
   display: flex;
   justify-content: space-evenly;
   border: 1px solid rgb(219, 217, 217);
-  border-radius: 10px;
+  border-radius: 100px 0 0 100px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: left;
   padding-left: 1rem;
   padding-right: 1rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-position:relative;
+  position:relative;
   background-color: white;
 }
 
@@ -83,7 +83,7 @@ font-weight:bold}
 .stats-wrapper {
 
 width:100%;
-  padding-left: 1rem;
+padding-left: 1rem;
 
 }
 
@@ -101,11 +101,25 @@ width:100%;
   color: grey;
 }
 
-.goals-grid img {
-  width: 70%;
-  margin-left: -50px;
-  margin-top: -15px;
-  margin-bottom: -15px;
+.goals-image {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -10px;
+  left: -8px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.goals-item-extra {
+  width: 150px;
+
+}
+
+.goals-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 footer {
