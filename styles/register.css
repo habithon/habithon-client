@@ -1,51 +1,51 @@
 body {
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    background: hsl(200, 100%, 50%);
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  background: hsl(200, 100%, 50%);
 }
 
 header {
-    display: grid;
-    place-content: center;
-    color: white;
-    background-image: url('https://image.cnbcfm.com/api/v1/image/105999935-1562097549646sport-stretching-leisure-hobby-woman-strong-exercise-workout-gym-weightlifting_t20_v7r7a7.jpg?v=1594825333&w=740&h=416');
-    position: relative;
-    background-size: 150%;
+  display: grid;
+  place-content: center;
+  color: white;
+  background-image: url("https://image.cnbcfm.com/api/v1/image/105999935-1562097549646sport-stretching-leisure-hobby-woman-strong-exercise-workout-gym-weightlifting_t20_v7r7a7.jpg?v=1594825333&w=740&h=416");
+  position: relative;
+  background-size: 150%;
 }
 
 header .curve {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: white;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    height: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  height: 2rem;
 }
 
 main {
-    display: grid;
-    place-content: center;
-    background: white;
-    gap: 1rem;
+  display: grid;
+  place-content: center;
+  background: white;
+  gap: 1rem;
 }
 
 footer {
-    display: grid;
-    place-content: center;
-    background: white;
-    padding: 2rem;
-    border-top: 0.1rem solid hsl(200, 100%, 0%);
+  display: grid;
+  place-content: center;
+  background: white;
+  padding: 2rem;
+  border-top: 0.1rem solid hsl(200, 100%, 0%);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .field {
-    display: flex;
+  display: flex;
 }
 
 .button {
@@ -54,33 +54,34 @@ form {
 }
 
 .field input {
-    font: inherit;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
-    outline: none;
-    border-radius: 1rem;
-    border-top-right-radius: 0rem;
-    border-bottom-right-radius: 0rem;
-    border: none;
-    font-size: smaller;
-    background: hsl(200, 100%, 90%);
+  font: inherit;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  outline: none;
+  border-radius: 1rem;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  border: none;
+  font-size: smaller;
+  background: hsl(200, 100%, 90%);
 }
 
 .field input::placeholder {
-    color: hsl(200, 100%, 30%);
+  color: hsl(200, 100%, 30%);
 }
 
 .field .icon {
-    width: 2rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    background: hsl(200, 100%, 90%);
-    display: grid;
-    place-content: center left;
-    color: hsl(200, 100%, 30%);
+  width: 2rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: hsl(200, 100%, 90%);
+  display: grid;
+  place-content: center left;
+  color: hsl(200, 100%, 30%);
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
+  color: black;
 }
 
 

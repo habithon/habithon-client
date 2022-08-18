@@ -3,6 +3,7 @@ checkUser();
 logout();
 
 const deleteElement = (e) => {
+
   const options = {
     method: "DELETE",
     headers: {
@@ -17,53 +18,69 @@ const deleteElement = (e) => {
 };
 
 const completedHabit = (e) => {
+  const number = parseInt(e.currentTarget.dataset.streak) +1
+  const date = Date.parse(e.currentTarget.dataset.last);
+  const frequency = e.currentTarget.dataset.frequency;
+  const now = Date.now()
+  let freqNum = 86400000;
+  if(frequency == "weekly"){
+    freqNum *= 7
+  } else if (frequency == "Monthly") {
+    freqNum *= 31
+  }
+  console.log(frequency)
+  const streak = {streak: number}
   const options = {
-    method: "GET",
+    method: "PUT",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
       Authorization: localStorage.getItem("token"),
     },
+    body: JSON.stringify(streak)
   };
-  const id = e.target.dataset.habit;
-  fetch("https://habithon-server.herokuapp.com/goals/" + id, options);
+  if(date + freqNum >= now) {
+    location.reload();
+  } else {
+    
+    const id = e.target.dataset.habit;
+    fetch("https://habithon-server.herokuapp.com/goals/" + id, options)
+    .then(res => {console.log(res); location.reload()});
+  }
 };
 
 (async () => {
   const habits = await getGoals();
-  console.log(habits);
   const grid = document.querySelector(".goals-grid");
 
   habits.forEach((habit) => {
     const div = document.createElement("div");
     div.classList.add("goals-item");
     div.innerHTML = ` 
-        <div class="goals-image"> <img src="images/daily-goals-${habit.habit.toLowerCase()}.jpg" alt=""></div>
+        <div class="goals-image"> <img src="images/daily-goals-${habit.habit}.jpg" alt=""></div>
         <div class="goals-item-extra"></div>
-        <div class='stats-wrapper'> <h2>${habit.habit}</h2>
-            <p><strong>Frequency: </strong>  <span>${habit.frequency}</span></p>
-            <p><strong>Current streak: </strong>  <span>${habit.streak}</span></p>
-        </div>
-        <div class='update-modal' id="read-modal">
-        <button class="update-btn completed" data-habit="${habit.id}">Completed</button>
-        <button class="update-btn deleteBtn" data-habit="${habit.id}">Delete</button>
-        <button class="update-btn cancel">Cancel</button>
+        <div class='stats-wrapper'><h1>${habit.habit.toLowerCase()}</h1><p>Frequency: <span>${habit.frequency.toUpperCase()}</span></p></div>
+        <p><strong>STREAK: </strong><span class="streak-number">${habit.streak}</span></p>
+        <div class='update-modal hidden'>
+          <button class="update-btn completed"  data-streak="${habit.streak}" data-habit="${habit.id}" data-last="${habit.last_completed}" data-frequency="${habit.frequency}">Completed</button>
+          <button class="update-btn deleteBtn" data-habit="${habit.id}">Delete</button>
         </div>
         `;
     grid.appendChild(div);
   });
-  document.querySelector(".goals-item").addEventListener("click", (a) => {
-    a.target;
-    document.querySelector(".update-modal").style.display = "flex";
-  });
-  document.querySelector(".deleteBtn").addEventListener("click", deleteElement);
-  document
-    .querySelector(".completed")
-    .addEventListener("click", completedHabit);
-  document.querySelector(".cancel").addEventListener("click", (a) => {
-    a.target;
-    document.querySelector(".update-modal").style.display = "hidden";
-  });
+  const goalItems = document.querySelectorAll(".goals-item");
+  for (let item of goalItems) {
+    item.addEventListener("click", (e) => {
+      const clickedGoal = e.currentTarget;
+      clickedGoal.querySelector(".update-modal").classList.toggle('hidden')
+
+      clickedGoal.querySelector(".deleteBtn").addEventListener('click', deleteElement)
+      clickedGoal.querySelector(".completed").addEventListener('click',completedHabit)
+
+    });
+  }
+
+
 })();
 
 const options = {
