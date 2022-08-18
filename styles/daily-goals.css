@@ -81,8 +81,9 @@ header .menu {
   width: 100%;
   padding-left: 1rem;
 }
+
 .update-modal {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -92,6 +93,10 @@ header .menu {
   height: 100%;
   background-color: white;
   border-radius: 2rem;
+}
+
+.hidden{
+  display: none;
 }
 
 .update-btn {
