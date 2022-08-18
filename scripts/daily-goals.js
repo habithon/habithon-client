@@ -39,12 +39,12 @@ const completedHabit = (e) => {
     div.innerHTML = ` 
         <img src="images/goals-water.jpg" alt="">
         <div class='stats-wrapper'> <h2>${habit.habit}</h2>
-            <p><strong>Frequency: </strong>  <span>${habit.frequency}</span></p>
-            <p><strong>Current streak: </strong>  <span>${habit.streak}</span></p>
+            <p><strong>Frequency: </strong>  <span class='count'> ${habit.frequency}</span></p>
+            <p><strong>Current streak: </strong>  <span class='count'>${habit.streak}</span></p>
         </div>
         <div class='update-modal' id="read-modal">
-        <button class="update-btn completed" data-habit="${habit.id}">Completed</button>
-        <button class="update-btn deleteBtn" data-habit="${habit.id}">Delete</button>
+        <button class="update-btn completed" data-habit=" ${habit.id}">Completed</button>
+        <button class="update-btn deleteBtn" data-habit=" ${habit.id}">Delete</button>
         <button class="update-btn cancel">Cancel</button>
         </div>
         `;

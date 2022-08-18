@@ -26,6 +26,8 @@ console.log('hello')
         frequency: arr[2][0]
     }
 
+    
+
     fetch('https://habithon-server.herokuapp.com/goals', {
     method: 'POST',
     headers: {
@@ -77,31 +79,31 @@ document.addEventListener('click', (e)=>{
     if(id == 'water' || id == 'water-img'){
         modalHandler()
         imageElement.setAttribute('name', 'images/goals-water.jpg')
-        elementToRename.setAttribute("name","water");
+        elementToRename.setAttribute("name","Water");
         elementToRenam.textContent = 'Drink 2ltr Water'
         
     } else if(id == 'exercise' || id == 'exercise-img'){
         modalHandler()
         imageElement.setAttribute('data-image', 'images/goals-exercise.jpg')
-        elementToRename.setAttribute("name","exercise");
+        elementToRename.setAttribute("name","Exercise");
         elementToRenam.textContent = 'Exercise'
         
     } else if(id == 'sleep' || id == 'sleep-img'){
         modalHandler()
         imageElement.setAttribute('name', 'images/goals-sleep.jpg')
-        elementToRename.setAttribute("name","sleep");
+        elementToRename.setAttribute("name","Sleep");
         elementToRenam.textContent = 'Sleep 8 hours'
         
     }else if(id == 'read' || id == 'read-img'){
         modalHandler()
         imageElement.setAttribute('name', 'images/goals-reading.jpg')
-        elementToRename.setAttribute("name","read");
+        elementToRename.setAttribute("name","Read");
         elementToRenam.textContent = 'Read'
         
     }else if(id == 'gaming' || id == 'gaming-img'){
         modalHandler()
         imageElement.setAttribute('name', 'images/gaming.jpg')
-        elementToRename.setAttribute("name","gaming");
+        elementToRename.setAttribute("name","Gaming");
         elementToRenam.textContent = 'Gaming'
         
     }else if(id == 'study' || id == 'study-img'){
