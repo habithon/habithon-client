@@ -49,6 +49,11 @@ form {
     width: 200%;
 }
 
+.button {
+    display: flex;
+    width: 86%;
+}
+
 .field input {
     font: inherit;
     padding: 0.5rem 0.5rem 0.5rem 1rem;
