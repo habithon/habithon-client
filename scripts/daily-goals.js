@@ -30,7 +30,8 @@ const completedHabit = (e) => {
     body: JSON.stringify(streak)
   };
   const id = e.target.dataset.habit;
-  fetch("https://habithon-server.herokuapp.com/goals/" + id, options);
+  fetch("https://habithon-server.herokuapp.com/goals/" + id, options)
+  .then(res => {console.log(res); location.reload()});
 };
 
 (async () => {
