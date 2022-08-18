@@ -1,14 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-family: arial;
+
+  font-family: "DynaPuff", cursive;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.5rem;
+  padding-top: 1.3rem;
+  padding-bottom: 0.9rem;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -76,7 +80,7 @@ header .menu {
 
 .habits-grid .habit-item h2 {
   font-size: 1.3rem;
-  font-family: arial;
+  font-weight: 200;
   margin: 0;
 }
 
@@ -145,6 +149,8 @@ header .menu {
   border-radius: 0.5rem;
   font-weight: bold;
   cursor: pointer;
+  font-weight:200;
+  margin-top: 1rem;
 }
 
 .stats-button {
@@ -155,9 +161,9 @@ header .menu {
   color: white;
   padding: 0.7rem;
   border-radius: 0.6rem;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 18px;
-  font-family: arial;
+ 
   margin-bottom: 2rem;
 }
 
@@ -223,10 +229,5 @@ footer img {
 
   .profile-pic {
     display: none;
-  }
-
-  header {
-    padding-top: 1.3rem;
-    padding-bottom: 0.9rem;
   }
 }
