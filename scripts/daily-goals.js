@@ -52,10 +52,13 @@ const completedHabit = (e) => {
         `;
     grid.appendChild(div);
   });
-  document.querySelector(".goals-item").addEventListener("click", (a) => {
-    a.target;
-    document.querySelector(".update-modal").style.display = "flex";
-  });
+  const goalItems = document.querySelectorAll(".goals-item");
+  for (let item of goalItems) {
+    item.addEventListener("click", (e) => {
+      console.log(e.currentTarget)
+      e.currentTarget.querySelector(".update-modal").style.display = "flex";
+    });
+  }
   document.querySelector(".deleteBtn").addEventListener("click", deleteElement);
   document
     .querySelector(".completed")
