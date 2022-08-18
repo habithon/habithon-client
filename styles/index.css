@@ -149,7 +149,7 @@ header .menu {
   border-radius: 0.5rem;
   font-weight: bold;
   cursor: pointer;
-  font-family: arial;
+  font-weight:200;
   margin-top: 1rem;
 }
 
@@ -161,9 +161,9 @@ header .menu {
   color: white;
   padding: 0.7rem;
   border-radius: 0.6rem;
-  font-weight: 600;
+  font-weight: 200;
   font-size: 18px;
-  font-family: arial;
+ 
   margin-bottom: 2rem;
 }
 
