@@ -4,6 +4,8 @@
   font-family: arial;
 }
 
+body{min-height:900px}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -21,8 +23,11 @@ header .menu {
   align-items: center;
 }
 .running-icon {
-  width: 60px;
-  margin-right: -16.5%;
+  position: absolute;
+  left: 50%;
+  top: 2.5rem;
+  transform: translate(-50%, -50%);
+  width: 6rem;
 }
 .profile-pic {
   width: 60px;
@@ -139,10 +144,13 @@ footer {
   height: 3rem;
   align-items: center;
   background-color: #d6deffa6;
-  position: absolute;
+  position: fixed;
+  
   bottom: 0;
   right: 0;
+  
   width: 100%;
+ 
 }
 footer div {
   background-color: #d6deffa6;
@@ -154,4 +162,63 @@ footer div {
 }
 footer img {
   width: 2rem;
+}
+
+@media only screen and (min-width: 580px) {
+  .goals-grid {
+    
+    width: 60%;
+    margin-left:22%;
+   
+  }
+
+  
+
+}
+
+@media only screen and (min-width: 800px) {
+  .goals-grid {
+    
+    width: 60%;
+    margin:auto;
+   
+  }
+
+  .goals-grid img {
+    width: 60%;
+   
+  }
+
+}
+
+@media only screen and (min-width: 900px) {
+  .goals-grid {
+    
+    width: 40%;
+    margin:auto;
+   
+  }
+
+  .goals-grid img {
+    width: 50%;
+   
+  }
+
+}
+
+
+@media only screen and (max-width: 375px) {
+  footer div {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .profile-pic {
+    display: none;
+  }
+
+  header {
+    padding-top: 1.3rem;
+    padding-bottom: 0.9rem;
+  }
 }
