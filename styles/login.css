@@ -1,7 +1,7 @@
 body {
-  display: grid;
+  /* display: grid;
   grid-template-rows: 1fr 2fr;
-  background: hsl(200, 100%, 50%);
+  background: hsl(200, 100%, 50%); */
 }
 
 header {
@@ -11,6 +11,13 @@ header {
   background-image: url("https://www.avogel.co.uk/images2020/March/easy-exercises-to-do-at-home-1200.png");
   position: relative;
   background-size: 150%;
+  height:200px;
+}
+
+@media (min-width: 1000px) {
+    header {
+        height: 400px;
+    }
 }
 
 header .curve {
@@ -42,42 +49,32 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 40px;
 }
 
 .field {
   display: flex;
-  width: 200%;
+  position: relative;
+  
 }
-
-.button {
-    display: flex;
-    width: 86%;
-}
-
 .field input {
-  font: inherit;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
-  outline: none;
-  border-radius: 1rem;
-  border-top-right-radius: 0rem;
-  border-bottom-right-radius: 0rem;
-  border: none;
-  font-size: smaller;
-  background: hsl(200, 100%, 90%);
-}
-
-.field input::placeholder {
-  color: hsl(200, 100%, 30%);
-}
+    font: inherit;
+    outline: none;
+    border-radius: 1rem;
+    border: none;
+    font-size: smaller;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    background: hsl(200, 100%, 90%); 
+    flex-grow: 1;
+    padding-right: 50px;
+  }
 
 .field .icon {
-  width: 2rem;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  background: hsl(200, 100%, 90%);
-  display: grid;
-  place-content: center left;
-  color: hsl(200, 100%, 30%);
+   color: hsl(200, 100%, 30%);
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-50%);
 }
 
 h2 {

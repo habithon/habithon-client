@@ -24,11 +24,13 @@ header .menu {
 }
 
 .running-icon {
-  position: absolute;
-  left: 50%;
-  top: 2.5rem;
-  transform: translate(-50%, -50%);
   width: 6rem;
+}
+
+@media (min-width :900px) {
+  .running-icon {
+    width: 15rem;
+  }
 }
 
 .profile-pic {

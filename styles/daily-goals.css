@@ -22,16 +22,20 @@ header .menu {
   display: flex;
   align-items: center;
 }
+
 .running-icon {
-  position: absolute;
-  left: 50%;
-  top: 2.5rem;
-  transform: translate(-50%, -50%);
   width: 6rem;
+}
+
+@media (min-width :900px) {
+  .running-icon {
+    width: 15rem;
+  }
 }
 .profile-pic {
   width: 60px;
 }
+
 .title {
   display: flex;
   justify-content: center;
@@ -79,7 +83,7 @@ header .menu {
   font-weight: bold;
 }
 .stats-wrapper {
-  width: 100%;
+  width: 90%;
   padding-left: 1rem;
 }
 
@@ -117,10 +121,10 @@ header .menu {
 }
 
 .goals-image {
-  width: 105px;
-  height: 105px;
+  width: 110px;
+  height: 110px;
   position: absolute;
-  top: -10px;
+  top: -7px;
   left: -8px;
   border-radius: 50%;
   overflow: hidden;

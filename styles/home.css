@@ -4,6 +4,11 @@ body {
     background: hsl(200, 100%, 50%);
 }
 
+.homebtn {
+    padding: 1.5rem 4rem;
+    border-radius: 10px;
+}
+
 header {
     display: grid;
     place-content: center;
