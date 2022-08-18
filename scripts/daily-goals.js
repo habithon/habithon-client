@@ -42,15 +42,13 @@ const completedHabit = (e) => {
     const div = document.createElement("div");
     div.classList.add("goals-item");
     div.innerHTML = ` 
-        <div class="goals-image"> <img src="images/daily-goals-${habit.habit.toLowerCase()}.jpg" alt=""></div>
+        <div class="goals-image"> <img src="images/daily-goals-${habit.habit}.jpg" alt=""></div>
         <div class="goals-item-extra"></div>
-        <div class='stats-wrapper'> <h2>${habit.habit}</h2>
-            <p><strong>Frequency: </strong>  <span>${habit.frequency}</span></p>
-            <p><strong>Current streak: </strong>  <span>${habit.streak}</span></p>
-        </div>
+        <div class='stats-wrapper'><h1>${habit.habit.toLowerCase()}</h1><p>Frequency:<span>${habit.frequency}</span></p></div>
+        <p><strong>STREAK: </strong><span class="streak-number">${habit.streak}</span></p>
         <div class='update-modal hidden'>
-        <button class="update-btn completed"  data-streak="${habit.streak}" data-habit="${habit.id}">Completed</button>
-        <button class="update-btn deleteBtn" data-habit="${habit.id}">Delete</button>
+          <button class="update-btn completed"  data-streak="${habit.streak}" data-habit="${habit.id}">Completed</button>
+          <button class="update-btn deleteBtn" data-habit="${habit.id}">Delete</button>
         </div>
         `;
     grid.appendChild(div);
