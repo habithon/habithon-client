@@ -1,5 +1,5 @@
-//import { checkUser, logout, getGoals } from "./utils.js";
-//checkUser();
+import { checkUser, logout, getGoals } from "./utils.js";
+checkUser();
 
 const subBtn = document.getElementById("sub-btn")
 const modalBackdrop = document.querySelector(".habit-modal-backdrop")
@@ -22,8 +22,8 @@ console.log('hello')
     console.log(arr)
     const body = {
         habit: arr[0][0],
-        imageUrl: arr[1][0],
-        frequency: arr[2][0]
+        frequency: arr[1][0],
+        imageUrl: 'fakeurl'
     }
 
     
@@ -71,44 +71,61 @@ function modalHandler(){
 document.addEventListener('click', (e)=>{
     
     const elementToRename = document.getElementById("form-key");
-    const imageElement = document.getElementById("form-image");
     const elementToRenam = document.getElementById("label-text");
    const id =  e.target.id
 
 
     if(id == 'water' || id == 'water-img'){
         modalHandler()
+
         imageElement.setAttribute('name', 'images/goals-water.jpg')
         elementToRename.setAttribute("name","Water");
+
+      
+
         elementToRenam.textContent = 'Drink 2ltr Water'
         
     } else if(id == 'exercise' || id == 'exercise-img'){
         modalHandler()
+
         imageElement.setAttribute('data-image', 'images/goals-exercise.jpg')
         elementToRename.setAttribute("name","Exercise");
+
+
         elementToRenam.textContent = 'Exercise'
         
     } else if(id == 'sleep' || id == 'sleep-img'){
         modalHandler()
+
         imageElement.setAttribute('name', 'images/goals-sleep.jpg')
         elementToRename.setAttribute("name","Sleep");
+
+      
+
         elementToRenam.textContent = 'Sleep 8 hours'
         
     }else if(id == 'read' || id == 'read-img'){
         modalHandler()
+
         imageElement.setAttribute('name', 'images/goals-reading.jpg')
         elementToRename.setAttribute("name","Read");
+
+     
+
         elementToRenam.textContent = 'Read'
         
     }else if(id == 'gaming' || id == 'gaming-img'){
         modalHandler()
+
         imageElement.setAttribute('name', 'images/gaming.jpg')
         elementToRename.setAttribute("name","Gaming");
+
+      
+
         elementToRenam.textContent = 'Gaming'
         
     }else if(id == 'study' || id == 'study-img'){
         modalHandler()
-        imageElement.setAttribute('name', 'images/studying.jpg')
         elementToRename.setAttribute("name","Study");
         elementToRenam.textContent = 'Study'
         
