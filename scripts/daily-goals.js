@@ -19,6 +19,16 @@ const deleteElement = (e) => {
 
 const completedHabit = (e) => {
   const number = parseInt(e.currentTarget.dataset.streak) +1
+  const date = Date.parse(e.currentTarget.dataset.last);
+  const frequency = e.currentTarget.dataset.frequency;
+  const now = Date.now()
+  let freqNum = 86400000;
+  if(frequency == "weekly"){
+    freqNum *= 7
+  } else if (frequency == "Monthly") {
+    freqNum *= 31
+  }
+  console.log(frequency)
   const streak = {streak: number}
   const options = {
     method: "PUT",
@@ -29,9 +39,14 @@ const completedHabit = (e) => {
     },
     body: JSON.stringify(streak)
   };
-  const id = e.target.dataset.habit;
-  fetch("https://habithon-server.herokuapp.com/goals/" + id, options)
-  .then(res => {console.log(res); location.reload()});
+  if(date + freqNum >= now) {
+    alert("Activity completed for this period, please come back tomorrow") // TODO should pop up as a nice window
+  } else {
+    
+    const id = e.target.dataset.habit;
+    fetch("https://habithon-server.herokuapp.com/goals/" + id, options)
+    .then(res => {console.log(res); location.reload()});
+  }
 };
 
 (async () => {
@@ -47,7 +62,7 @@ const completedHabit = (e) => {
         <div class='stats-wrapper'><h1>${habit.habit.toLowerCase()}</h1><p>Frequency:<span>${habit.frequency}</span></p></div>
         <p><strong>STREAK: </strong><span class="streak-number">${habit.streak}</span></p>
         <div class='update-modal hidden'>
-          <button class="update-btn completed"  data-streak="${habit.streak}" data-habit="${habit.id}">Completed</button>
+          <button class="update-btn completed"  data-streak="${habit.streak}" data-habit="${habit.id}" data-last="${habit.last_completed}" data-frequency="${habit.frequency}">Completed</button>
           <button class="update-btn deleteBtn" data-habit="${habit.id}">Delete</button>
         </div>
         `;
