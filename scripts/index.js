@@ -26,8 +26,6 @@ console.log('hello')
         imageUrl: 'fakeurl'
     }
 
-    
-
     fetch('https://habithon-server.herokuapp.com/goals', {
     method: 'POST',
     headers: {
@@ -77,51 +75,27 @@ document.addEventListener('click', (e)=>{
 
     if(id == 'water' || id == 'water-img'){
         modalHandler()
-
-        imageElement.setAttribute('name', 'images/goals-water.jpg')
-        elementToRename.setAttribute("name","Water");
-
-      
-
+        elementToRename.setAttribute("name","water");
         elementToRenam.textContent = 'Drink 2ltr Water'
         
     } else if(id == 'exercise' || id == 'exercise-img'){
         modalHandler()
-
-        imageElement.setAttribute('data-image', 'images/goals-exercise.jpg')
-        elementToRename.setAttribute("name","Exercise");
-
-
+        elementToRename.setAttribute("name","exercise");
         elementToRenam.textContent = 'Exercise'
         
     } else if(id == 'sleep' || id == 'sleep-img'){
         modalHandler()
-
-        imageElement.setAttribute('name', 'images/goals-sleep.jpg')
-        elementToRename.setAttribute("name","Sleep");
-
-      
-
+        elementToRename.setAttribute("name","sleep");
         elementToRenam.textContent = 'Sleep 8 hours'
         
     }else if(id == 'read' || id == 'read-img'){
         modalHandler()
-
-        imageElement.setAttribute('name', 'images/goals-reading.jpg')
-        elementToRename.setAttribute("name","Read");
-
-     
-
+        elementToRename.setAttribute("name","read");
         elementToRenam.textContent = 'Read'
         
     }else if(id == 'gaming' || id == 'gaming-img'){
         modalHandler()
-
-        imageElement.setAttribute('name', 'images/gaming.jpg')
-        elementToRename.setAttribute("name","Gaming");
-
-      
-
+        elementToRename.setAttribute("name","gaming");
         elementToRenam.textContent = 'Gaming'
         
     }else if(id == 'study' || id == 'study-img'){
@@ -129,9 +103,7 @@ document.addEventListener('click', (e)=>{
         elementToRename.setAttribute("name","Study");
         elementToRenam.textContent = 'Study'
         
-    }else;
+    };
 })
-
-
 
 
