@@ -1,7 +1,7 @@
 function checkUser () {
 
     const token = localStorage.getItem('token');
-
+    console.log(token)
     if (!token) {
     window.location.assign("/pages/login.html")
     }

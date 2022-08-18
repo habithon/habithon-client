@@ -12,7 +12,8 @@ const deleteElement = (e) => {
     },
   };
   const id = e.target.dataset.habit;
-  fetch("https://habithon-server.herokuapp.com/goals/" + id, options);
+  fetch("https://habithon-server.herokuapp.com/goals/" + id, options)
+  .then(res => {console.log(res); location.reload();})
 };
 
 const completedHabit = (e) => {
