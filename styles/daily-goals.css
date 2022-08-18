@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
 
-  font-family: "DynaPuff", cursive;
+  font-family: "Arvo";
 }
 
 header {
@@ -29,7 +29,7 @@ header .menu {
   width: 6rem;
 }
 
-@media (min-width :900px) {
+@media (min-width: 900px) {
   .running-icon {
     width: 15rem;
   }
@@ -221,7 +221,7 @@ footer img {
   }
 
   .goals-grid img {
-    width: 60%;
+    width: 100%;
   }
 }
 
@@ -232,7 +232,7 @@ footer img {
   }
 
   .goals-grid img {
-    width: 50%;
+    width: 100%;
   }
   .goals-grid {
     grid-template-columns: 1fr;

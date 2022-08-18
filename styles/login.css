@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap");
+
 body {
   /* display: grid;
   grid-template-rows: 1fr 2fr;
@@ -11,13 +13,13 @@ header {
   background-image: url("https://www.avogel.co.uk/images2020/March/easy-exercises-to-do-at-home-1200.png");
   position: relative;
   background-size: 150%;
-  height:200px;
+  height: 200px;
 }
 
 @media (min-width: 1000px) {
-    header {
-        height: 400px;
-    }
+  header {
+    height: 400px;
+  }
 }
 
 header .curve {
@@ -55,29 +57,39 @@ form {
 .field {
   display: flex;
   position: relative;
-  
 }
 .field input {
-    font: inherit;
-    outline: none;
-    border-radius: 1rem;
-    border: none;
-    font-size: smaller;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
-    background: hsl(200, 100%, 90%); 
-    flex-grow: 1;
-    padding-right: 50px;
-  }
+  font: inherit;
+  outline: none;
+  border-radius: 1rem;
+  border: none;
+  font-size: smaller;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  background: hsl(200, 100%, 90%);
+  flex-grow: 1;
+  padding-right: 50px;
+}
 
 .field .icon {
-   color: hsl(200, 100%, 30%);
-   position: absolute;
-   right: 10px;
-   top: 50%;
-   transform: translateY(-50%);
+  color: hsl(200, 100%, 30%);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 h2 {
+  font-family: "Arvo";
+  font-size: 50px;
   text-align: center;
-  color: black;
+  color: rgba(90, 14, 120, 0.596);
+  background-color: rgba(255, 255, 255, 0.254);
+  padding: 20px;
+  border-radius: 10px;
 }
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: 20px;
+  }
+} ;
