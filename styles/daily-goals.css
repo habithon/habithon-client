@@ -1,16 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  font-family: arial;
-}
 
-body{min-height:900px}
+  font-family: "DynaPuff", cursive;
+}
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.5rem;
+  padding-top: 1.3rem;
+  padding-bottom: 0.9rem;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -48,6 +50,11 @@ header .menu {
   font-size: 25px;
   font-weight: bold;
 }
+
+main {
+  margin-bottom: 3rem;
+}
+
 .goals-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -75,6 +82,8 @@ header .menu {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   position: relative;
   background-color: white;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
 }
 .goals-grid .goals-item .active {
   position: absolute;
@@ -85,6 +94,19 @@ header .menu {
 .stats-wrapper {
   width: 90%;
   padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.stats-wrapper p {
+  color: rgb(44, 42, 42);
+}
+
+.stats-wrapper .count {
+  margin-left: 0.5rem;
+}
+
+.stats-wrapper h2 {
+  color: rgb(39, 37, 37);
 }
 
 .update-modal {
@@ -100,15 +122,13 @@ header .menu {
   border-radius: 2rem;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 .streak-number {
-
   font-size: 25px;
   font-weight: bold;
   color: chartreuse !important;
-
 }
 .update-btn {
   margin: 0.5rem;
@@ -120,6 +140,15 @@ header .menu {
   border: none;
 }
 
+.completed {
+  background-color: black;
+}
+.deleteBtn {
+  background-color: black;
+}
+.cancel {
+  background-color: black;
+}
 .goals-image {
   width: 110px;
   height: 110px;
@@ -132,7 +161,6 @@ header .menu {
 
 .goals-item-extra {
   width: 150px;
-
 }
 
 .goals-image img {
@@ -161,12 +189,11 @@ footer {
   align-items: center;
   background-color: #d6deffa6;
   position: fixed;
-  
+
   bottom: 0;
   right: 0;
-  
+
   width: 100%;
- 
 }
 footer div {
   background-color: #d6deffa6;
@@ -182,46 +209,37 @@ footer img {
 
 @media only screen and (min-width: 580px) {
   .goals-grid {
-    
     width: 60%;
-    margin-left:22%;
-   
+    margin-left: 22%;
   }
-
-  
-
 }
 
 @media only screen and (min-width: 800px) {
   .goals-grid {
-    
     width: 60%;
-    margin:auto;
-   
+    margin: auto;
   }
 
   .goals-grid img {
-    width: 100%;
-   
+    width: 60%;
   }
-
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1200px) {
   .goals-grid {
-    
     width: 40%;
-    margin:auto;
-   
+    margin: auto;
   }
 
   .goals-grid img {
-    width: 100%;
-   
+    width: 50%;
   }
-
+  .goals-grid {
+    grid-template-columns: 1fr;
+    width: 40%;
+    margin: auto;
+  }
 }
-
 
 @media only screen and (max-width: 375px) {
   footer div {
@@ -233,8 +251,17 @@ footer img {
     display: none;
   }
 
-  header {
-    padding-top: 1.3rem;
-    padding-bottom: 0.9rem;
+  .update-btn {
+    margin: 0.3rem;
+  }
+
+  .goals-grid img {
+    width: 100%;
+  }
+
+  .stats-wrapper {
+    padding-left: 1rem;
+
+    margin-bottom: 0.5rem;
   }
 }

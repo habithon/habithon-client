@@ -26,6 +26,8 @@ console.log('hello')
         imageUrl: 'fakeurl'
     }
 
+    
+
     fetch('https://habithon-server.herokuapp.com/goals', {
     method: 'POST',
     headers: {
@@ -75,27 +77,51 @@ document.addEventListener('click', (e)=>{
 
     if(id == 'water' || id == 'water-img'){
         modalHandler()
-        elementToRename.setAttribute("name","water");
+
+        imageElement.setAttribute('name', 'images/goals-water.jpg')
+        elementToRename.setAttribute("name","Water");
+
+      
+
         elementToRenam.textContent = 'Drink 2ltr Water'
         
     } else if(id == 'exercise' || id == 'exercise-img'){
         modalHandler()
-        elementToRename.setAttribute("name","exercise");
+
+        imageElement.setAttribute('data-image', 'images/goals-exercise.jpg')
+        elementToRename.setAttribute("name","Exercise");
+
+
         elementToRenam.textContent = 'Exercise'
         
     } else if(id == 'sleep' || id == 'sleep-img'){
         modalHandler()
-        elementToRename.setAttribute("name","sleep");
+
+        imageElement.setAttribute('name', 'images/goals-sleep.jpg')
+        elementToRename.setAttribute("name","Sleep");
+
+      
+
         elementToRenam.textContent = 'Sleep 8 hours'
         
     }else if(id == 'read' || id == 'read-img'){
         modalHandler()
-        elementToRename.setAttribute("name","read");
+
+        imageElement.setAttribute('name', 'images/goals-reading.jpg')
+        elementToRename.setAttribute("name","Read");
+
+     
+
         elementToRenam.textContent = 'Read'
         
     }else if(id == 'gaming' || id == 'gaming-img'){
         modalHandler()
-        elementToRename.setAttribute("name","gaming");
+
+        imageElement.setAttribute('name', 'images/gaming.jpg')
+        elementToRename.setAttribute("name","Gaming");
+
+      
+
         elementToRenam.textContent = 'Gaming'
         
     }else if(id == 'study' || id == 'study-img'){
