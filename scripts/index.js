@@ -1,5 +1,5 @@
-//import { checkUser, logout, getGoals } from "./utils.js";
-//checkUser();
+import { checkUser, logout, getGoals } from "./utils.js";
+checkUser();
 
 const subBtn = document.getElementById("sub-btn")
 const modalBackdrop = document.querySelector(".habit-modal-backdrop")

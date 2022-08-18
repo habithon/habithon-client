@@ -40,7 +40,7 @@ const completedHabit = (e) => {
     body: JSON.stringify(streak)
   };
   if(date + freqNum >= now) {
-    alert("Activity completed for this period, please come back tomorrow") // TODO should pop up as a nice window
+    location.reload();
   } else {
     
     const id = e.target.dataset.habit;
@@ -59,7 +59,7 @@ const completedHabit = (e) => {
     div.innerHTML = ` 
         <div class="goals-image"> <img src="images/daily-goals-${habit.habit}.jpg" alt=""></div>
         <div class="goals-item-extra"></div>
-        <div class='stats-wrapper'><h1>${habit.habit.toLowerCase()}</h1><p>Frequency:<span>${habit.frequency}</span></p></div>
+        <div class='stats-wrapper'><h1>${habit.habit.toLowerCase()}</h1><p>Frequency: <span>${habit.frequency.toUpperCase()}</span></p></div>
         <p><strong>STREAK: </strong><span class="streak-number">${habit.streak}</span></p>
         <div class='update-modal hidden'>
           <button class="update-btn completed"  data-streak="${habit.streak}" data-habit="${habit.id}" data-last="${habit.last_completed}" data-frequency="${habit.frequency}">Completed</button>
