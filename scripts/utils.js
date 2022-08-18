@@ -20,7 +20,6 @@ function logout () {
 
     document.querySelector('.logout')
     .addEventListener('click', () => {
-        console.log("hi")
         localStorage.removeItem('token')
         window.location.assign("/pages/login.html")
     })
@@ -52,4 +51,37 @@ async function getGoals () {
     
 }
 
-export { checkUser, checkInvalidUser, logout, getGoals };
+async function login (data) {
+    
+    const options = {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+
+    const response = await fetch("https://habithon-server.herokuapp.com/user/login", options)
+    const resData = await response.json()
+    return resData
+}
+
+async function register (data) {
+    const options = {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+
+    const response = await fetch("https://habithon-server.herokuapp.com/user/register", options)
+    const resData = await response.json()
+    return resData
+        
+}
+
+
+module.exports =  { checkUser, checkInvalidUser, logout, getGoals, login, register };

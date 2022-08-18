@@ -1,42 +1,29 @@
-import { checkInvalidUser } from "./utils.js"
+import { checkInvalidUser, login } from "./utils.js"
 checkInvalidUser();
 
-function login (data) {
-    
-    const options = {
-        method: "POST",
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    }
 
-    fetch("https://habithon-server.herokuapp.com/user/login", options)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if (data["success"]) {
-                localStorage.setItem("token", data["token"]);
-                window.location.assign("/pages/daily-goals.html");
-            } else {
-                throw "Unable to authenticate!"
-            }
-          
-        })
-        .catch(err => alert(err))
-
-}
-
-document.querySelector('.login-form').addEventListener("submit", (e) => {
+document.querySelector('.login-form').addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const form = new FormData(e.target);
 
-    login({
-        username: form.get("username"),
-        password: form.get("password")
-    })
+    try {
+        
+        const data = await login({
+            username: form.get("username"),
+            password: form.get("password")
+        })
+
+        if (data["success"]) {
+            localStorage.setItem("token", data["token"]);
+            window.location.assign("/pages/daily-goals.html");
+        } else {
+            throw "Unable to authenticate!"
+        }
+    } catch (err) {
+        alert(err)
+    }
+   
 
     e.target.reset();
 })

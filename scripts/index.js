@@ -1,18 +1,14 @@
-//import { checkUser, logout, getGoals } from "./utils.js";
-//checkUser();
+import { checkUser, logout, getGoals } from "./utils.js";
+checkUser();
 
 const subBtn = document.getElementById("sub-btn")
 const modalBackdrop = document.querySelector(".habit-modal-backdrop")
 const habitModal = document.querySelector(".habit-modal")
 const closeModal = document.querySelector(".close")
 
-
-
 const form = document.querySelector('form')
 
-
 form.addEventListener('submit', function (e){
-console.log('hello')
 
     e.preventDefault()
     const prePayload = new FormData(form);
