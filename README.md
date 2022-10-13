@@ -1,7 +1,7 @@
 # Habithon
 
 A mobile app where users can track there daily habits and set goals.
-- View the app on netlify at https://fluffy-pie-b7b363.netlify.app/pages/
+- View the app on netlify at https://fluffy-pie-b7b363.netlify.app/pages/login.html
 ## Installation & Usage
 
 - Clone or download the repo.
